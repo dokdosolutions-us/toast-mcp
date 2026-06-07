@@ -1,13 +1,13 @@
 # Jam – Toast MCP Server 🍓
 
-A production-ready Model Context Protocol (MCP) server for Toast POS, engineered for the front lines of restaurant operations. Optimized for **Koryo KBBQ** and their high-velocity wholesaler integrations.
+A production-ready Model Context Protocol (MCP) server for Toast POS, engineered for the front lines of restaurant operations. Give any LLM direct access to your Toast data — inventory, orders, menu, labor, and smart operational insights.
 
 ## The Mission
 Dokdo Solutions believes in empowering restaurant owners with the same level of intelligence and automation as tech giants. This MCP server bridges the gap between Toast's robust POS data and the reasoning capabilities of Large Language Models (LLMs), enabling smarter inventory tracking, predictive ordering, and seamless "restaurant owner first" operations.
 
 ## Key Features
 
-- **Inventory Mastery:** Real-time stock tracking tailored for wholesaler coordination. Never run out of Galbi again.
+- **Inventory Mastery:** Real-time stock tracking and low-stock alerts.
 - **Smart Insights:** Predictive analysis of stock needs and peak hour detection.
 - **Modular Tools:** Dedicated modules for Menu, Orders, Inventory, Labor, and Restaurant management.
 - **Robust Architecture:** Built with TypeScript, Zod validation, Bottleneck rate-limiting, and Axios-retry for mission-critical reliability.
@@ -37,7 +37,7 @@ Dokdo Solutions believes in empowering restaurant owners with the same level of 
 ### Smart Operations
 - `analyze_stock_needs`: Sales-velocity based predictions.
 - `detect_peak_hours`: Staffing optimization intelligence.
-- `generate_wholesaler_list`: Your automated shopping list for Koryo KBBQ.
+- `generate_wholesaler_list`: Automated shopping list generation based on stock levels.
 
 ## Setup
 
