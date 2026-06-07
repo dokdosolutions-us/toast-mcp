@@ -29,6 +29,7 @@ Dokdo Solutions believes in empowering restaurant owners with the same level of 
 - `get_orders`: Monitor recent transactions.
 - `get_order_details`: Audit specific orders.
 - `void_order`: Handle corrections with ease.
+- `get_delivery_orders`: Track third-party delivery orders (UberEats, DoorDash, GrubHub, Postmates, Caviar) with revenue breakdown by platform.
 
 ### Labor & Staff
 - `get_employees`: Manage your team.
