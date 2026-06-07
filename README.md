@@ -65,7 +65,7 @@ This server wraps the Toast API into **50+ LLM-callable tools** across every maj
 
 ### Prerequisites
 
-- Node.js 20+
+- Node.js 24+
 - A [Toast developer account](https://www.toasttab.com) with API credentials
 - Your Toast Restaurant GUID
 
