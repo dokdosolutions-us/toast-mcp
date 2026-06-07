@@ -1,0 +1,58 @@
+{
+  "name": "Jam – Toast MCP",
+  "description": "Model Context Protocol server for Toast POS — restaurant operations, inventory, orders, delivery integrations, and smart operational insights",
+  "version": "0.1.0",
+  "author": "Dokdo Solutions",
+  "homepage": "https://github.com/dokdosolutions-us/toast-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dokdosolutions-us/toast-mcp.git"
+  },
+  "license": "MIT",
+  "mcp-name": "toast-mcp",
+  "installation": {
+    "npm": "toast-mcp"
+  },
+  "tools": [
+    {
+      "name": "Inventory Management",
+      "description": "Real-time stock tracking, low-stock alerts, auto-menu adjustments"
+    },
+    {
+      "name": "Order Management",
+      "description": "Order history, details, void handling, third-party delivery filtering"
+    },
+    {
+      "name": "Menu Management",
+      "description": "Browse items, categories, pricing, search"
+    },
+    {
+      "name": "Labor & Staff",
+      "description": "Employee management, shift tracking, labor costs"
+    },
+    {
+      "name": "Analytics",
+      "description": "Revenue by period, peak hours, best-sellers"
+    },
+    {
+      "name": "Financial Reporting",
+      "description": "Daily/weekly/monthly summaries, payment breakdowns"
+    },
+    {
+      "name": "Operations",
+      "description": "Open orders, void tracking, refund analysis"
+    },
+    {
+      "name": "Customer Retention",
+      "description": "Frequent customer identification, lapsed customer detection"
+    },
+    {
+      "name": "Forecasting",
+      "description": "Trends, seasonal patterns, staffing demand signals"
+    },
+    {
+      "name": "Smart Operations",
+      "description": "Stock velocity predictions, peak hour detection, recommendations"
+    }
+  ]
+}
