@@ -1,16 +1,30 @@
 # Jam – Toast MCP Server 🍓
 
-A production-ready Model Context Protocol (MCP) server for Toast POS, engineered for the front lines of restaurant operations. Give any LLM direct access to your Toast data — inventory, orders, menu, labor, and smart operational insights.
+**A [Model Context Protocol (MCP)](https://modelcontextprotocol.io) server for [Toast POS](https://www.toasttab.com) — giving AI agents direct access to restaurant operations: menu management, orders, inventory, labor, delivery integrations, and smart operational insights.**
 
-## The Mission
-Dokdo Solutions believes in empowering restaurant owners with the same level of intelligence and automation as tech giants. This MCP server bridges the gap between Toast's robust POS data and the reasoning capabilities of Large Language Models (LLMs), enabling smarter inventory tracking, predictive ordering, and seamless "restaurant owner first" operations.
+Connect any MCP-compatible AI (Claude, GPT-4, Cursor, Continue, OpenClaw, and others) to your Toast account and turn natural language into real POS actions — no dashboard, no manual lookups, no custom integration code.
 
-## Key Features
+This project was born out of a simple idea: restaurant owners deserve the same kind of intelligent assistant that enterprise businesses take for granted. Not a chatbot. Not a dashboard. Something that watches your inventory, knows your peak hours, and surfaces insights when you need them most.
 
-- **Inventory Mastery:** Real-time stock tracking and low-stock alerts.
-- **Smart Insights:** Predictive analysis of stock needs and peak hour detection.
-- **Modular Tools:** Dedicated modules for Menu, Orders, Inventory, Labor, and Restaurant management.
-- **Robust Architecture:** Built with TypeScript, Zod validation, Bottleneck rate-limiting, and Axios-retry for mission-critical reliability.
+We built this as the data layer for an AI co-pilot system. It exposes the Toast API as a clean set of MCP tools that any LLM can call — so instead of logging into Toast, checking stock levels, cross-referencing delivery platforms, and manually updating your menu, you just ask.
+
+---
+
+## What It Does
+
+This server wraps the Toast API into **LLM-callable tools** across every major area of restaurant operations:
+
+| Domain | Capabilities |
+|---|---|
+| **Inventory** | Real-time stock levels, low-stock alerts, auto-menu adjustments when ingredients run out |
+| **Orders** | Order history, details, void handling, **third-party delivery filtering** (UberEats, DoorDash, GrubHub, Postmates, Caviar) |
+| **Menu** | Browse items, categories, pricing, search functionality |
+| **Labor** | Employee management, shift tracking, labor cost visibility |
+| **Smart Operations** | Stock velocity predictions, peak hour detection, automated ordering recommendations |
+
+**Key difference:** Unlike other Toast integrations, Jam includes **native third-party delivery order tracking** with platform-level revenue breakdown — something competitors haven't built.
+
+---
 
 ## Tools
 
@@ -40,49 +54,68 @@ Dokdo Solutions believes in empowering restaurant owners with the same level of 
 - `detect_peak_hours`: Staffing optimization intelligence.
 - `generate_wholesaler_list`: Automated shopping list generation based on stock levels.
 
-## Setup
+---
 
-### 1. Prerequisites
-- Toast API Client ID and Secret.
-- Your Restaurant GUID.
+## Getting Started
 
-### 2. Environment Configuration
-Create a `.env` file from the provided `.env.example`:
+### Prerequisites
+
+- Node.js 20+
+- A [Toast developer account](https://www.toasttab.com) with API credentials
+- Your Toast Restaurant GUID
+
+### Install via npm (recommended)
+
 ```bash
-TOAST_CLIENT_ID=your_client_id
-TOAST_CLIENT_SECRET=your_client_secret
-TOAST_RESTAURANT_GUID=your_restaurant_guid
-TOAST_API_BASE_URL=https://api.toasttab.com
+npx @dokdosolutions/toast-mcp
 ```
 
-### 3. Installation
+### Or install from source
+
 ```bash
 npm install
 npm run build
 ```
 
-### 4. Usage
-Run via `npx`:
+### Configure
+
 ```bash
-npx .
+cp .env.example .env
+# Fill in your TOAST_CLIENT_ID, TOAST_CLIENT_SECRET, and TOAST_RESTAURANT_GUID
+```
+
+### Run
+
+```bash
+npm start
 ```
 
 Or connect it to your MCP host (like Claude Desktop) using the absolute path to the build:
+
 ```json
 {
   "mcpServers": {
-    "toast": {
+    "jam": {
       "command": "node",
       "args": ["/absolute/path/to/toast-mcp/dist/index.js"],
       "env": {
-        "TOAST_CLIENT_ID": "...",
-        "TOAST_CLIENT_SECRET": "...",
-        "TOAST_RESTAURANT_GUID": "..."
+        "TOAST_CLIENT_ID": "your_client_id",
+        "TOAST_CLIENT_SECRET": "your_client_secret",
+        "TOAST_RESTAURANT_GUID": "your_restaurant_guid"
       }
     }
   }
 }
 ```
 
+---
+
+## Built By
+
+[Dokdo Solutions](https://github.com/dokdosolutions-us) — AI integration for restaurant owners.
+
+---
+
 ## License
-MIT - Created with pride by Dokdo Solutions.
+
+MIT
