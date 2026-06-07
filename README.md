@@ -12,7 +12,7 @@ We built this as the data layer for an AI co-pilot system. It exposes the Toast 
 
 ## What It Does
 
-This server wraps the Toast API into **LLM-callable tools** across every major area of restaurant operations:
+This server wraps the Toast API into **50+ LLM-callable tools** across every major area of restaurant operations:
 
 | Domain | Capabilities |
 |---|---|
@@ -20,6 +20,11 @@ This server wraps the Toast API into **LLM-callable tools** across every major a
 | **Orders** | Order history, details, void handling, **third-party delivery filtering** (UberEats, DoorDash, GrubHub, Postmates, Caviar) |
 | **Menu** | Browse items, categories, pricing, search functionality |
 | **Labor** | Employee management, shift tracking, labor cost visibility |
+| **Analytics** | Revenue by period, peak hours, best-selling items, category breakdown |
+| **Financial** | Daily/weekly/monthly summaries, tender breakdowns, payment method analysis |
+| **Operations** | Open order tracking, void analysis, refund patterns, transaction monitoring |
+| **Retention** | Frequent customer identification, lapsed customer detection, win-back messaging |
+| **Forecasting** | Week-over-week trends, seasonal patterns, staffing demand signals |
 | **Smart Operations** | Stock velocity predictions, peak hour detection, automated ordering recommendations |
 
 **Key difference:** Unlike other Toast integrations, Jam includes **native third-party delivery order tracking** with platform-level revenue breakdown — something competitors haven't built.
